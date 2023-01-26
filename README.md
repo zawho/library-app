@@ -1,0 +1,1 @@
+January 26, 2023 - I am now beginning an exercise to create a "book" object as part of The Odin Project's Javscript track. When I finish this lesson, the object will serve as the basis for my next project, a library app. Additionally, this is my first project for which I am using Eslint, Prettier, and relatedly, additional Git functionalities like .gitignore.
