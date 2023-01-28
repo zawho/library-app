@@ -9,18 +9,21 @@ const addBookButton = document.querySelector('.add-book');
 let theLibrary = [];
 
 // Book constructor.
-function Book(title, author, pages /* , readStatus */) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
+function Book() {
+    this.title = '';
+    this.author = '';
+    this.pages = '';
     // this.readStatus = readStatus;
 }
 
-// User book variable;
-let userBook = new Book(titleInput.value, authorInput.value, pagesInput.value);
+// User book variable.
+let userBook = new Book();
+
+userBook.prototype = Object.create(Book.prototype);
 
 // Add book to library.
 function addBook() {
+    userBook.title = titleInput.value;
     theLibrary.push(userBook);
     console.log(theLibrary);
 }
