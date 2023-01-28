@@ -1,3 +1,5 @@
+// Main book storage array.
+let theLibrary = [];
 
 // Book constructor.
 function Book(title, author, pages, readStatus) {
@@ -5,6 +7,11 @@ function Book(title, author, pages, readStatus) {
     this.author = author;
     this.pages = pages;
     this.readStatus = readStatus;
+}
+
+// Add book to library.
+function addBook() {
+    
 }
 
 
