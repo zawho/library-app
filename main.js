@@ -6,7 +6,7 @@ const pagesInput = document.querySelector('.pages-input');
 const addBookButton = document.querySelector('.add-book');
 
 // Main book storage array.
-let theLibrary = [];
+const theLibrary = [];
 
 // Book constructor.
 function Book() {
@@ -16,14 +16,12 @@ function Book() {
     // this.readStatus = readStatus;
 }
 
-// User book variable.
-let userBook = new Book();
-
-userBook.prototype = Object.create(Book.prototype);
-
 // Add book to library.
 function addBook() {
+    const userBook = new Book();
     userBook.title = titleInput.value;
+    userBook.author = authorInput.value;
+    userBook.pages = pagesInput.value;
     theLibrary.push(userBook);
     console.log(theLibrary);
 }
