@@ -9,15 +9,17 @@ function Book(title, author, pages, readStatus) {
     this.readStatus = readStatus;
 }
 
-// Add book to library.
-function addBook() {
-    
-}
-
-
-/* Example book instance.
+// Example book instance.
 Book.prototype.info = function getBookInfo() {
     return `${this.title} by ${this.author}, ${this.pages} pages, ${this.readStatus}`;
 }
+
 const nightwood = new Book('Nightwood', 'Djuna Barnes', '180', 'Have read');
-console.log(nightwood.info()); */
+
+// Add book to library.
+function addBook() {
+    theLibrary.push(Book);
+}
+
+addBook();
+console.log(theLibrary);
