@@ -21,11 +21,7 @@ function Book() {
 
 // New book button displays form.
 function createBook() {
-    titleInput.value = '';
-    authorInput.value = '';
-    pagesInput.value = '';
-    yesRead.checked = false;
-    notRead.checked = false;
+    document.querySelector('.book-form').reset();
     document.querySelector('.book-form').style.display = 'inline-flex';
     document.querySelector('.book-form').style.flexDirection = 'column';
 }
