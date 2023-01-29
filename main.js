@@ -28,6 +28,7 @@ function displayBook() {
             cardTitle.innerText = theLibrary[theLibrary.length - 1].title;
             cardAuthor.innerText = theLibrary[theLibrary.length - 1].author;
             cardPages.innerText = theLibrary[theLibrary.length - 1].pages;
+            cardReadStatus.innerText = theLibrary[theLibrary.length - 1].readStatus;
             userLibrary.appendChild(bookCard);
             bookCard.appendChild(cardTitle);
             bookCard.appendChild(cardAuthor);
