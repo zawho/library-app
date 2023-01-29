@@ -1,7 +1,10 @@
+const newBookButton = document.querySelector('.new-button');
+document.querySelector('.book-form').style.display = 'none';
 const titleInput = document.querySelector('.title-input');
 const authorInput = document.querySelector('.author-input');
 const pagesInput = document.querySelector('.pages-input');
 const yesRead = document.querySelector('.yes-read');
+const notRead = document.querySelector('.not-read');
 const addBookButton = document.querySelector('.add-book');
 const userLibrary = document.querySelector('.user-library');
 
@@ -14,6 +17,17 @@ function Book() {
     this.author = '';
     this.pages = '';
     this.readStatus = '';
+}
+
+// New book button displays form.
+function createBook() {
+    titleInput.value = '';
+    authorInput.value = '';
+    pagesInput.value = '';
+    yesRead.checked = false;
+    notRead.checked = false;
+    document.querySelector('.book-form').style.display = 'inline-flex';
+    document.querySelector('.book-form').style.flexDirection = 'column';
 }
 
 // Loop through array and display books.
@@ -40,6 +54,7 @@ function displayBook() {
 // Add book to library.
 function addBook() {
     const userBook = new Book();
+    document.querySelector('.book-form').style.display = 'none';
     userBook.title = titleInput.value;
     userBook.author = authorInput.value;
     userBook.pages = pagesInput.value;
@@ -49,8 +64,8 @@ function addBook() {
         userBook.readStatus = 'Unfinished';
     }
     theLibrary.push(userBook);
-    console.log(theLibrary);
     displayBook();
 }
 
+newBookButton.addEventListener('click', createBook);
 addBookButton.addEventListener('click', addBook);
