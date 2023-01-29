@@ -22,6 +22,11 @@ function addBook() {
     userBook.title = titleInput.value;
     userBook.author = authorInput.value;
     userBook.pages = pagesInput.value;
+    if (yesRead.checked) {
+        userBook.readStatus = 'Read';
+    } else if (notRead.checked) {
+        userBook.readStatus = 'Not read';
+    }
     theLibrary.push(userBook);
     console.log(theLibrary);
 }
