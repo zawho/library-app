@@ -49,7 +49,6 @@ function displayBook() {
 // Add book to library.
 function addBook(e) {
     const userBook = new Book();
-    document.querySelector('.book-form').style.display = 'none';
     userBook.title = titleInput.value;
     userBook.author = authorInput.value;
     userBook.pages = pagesInput.value;
@@ -59,8 +58,11 @@ function addBook(e) {
         userBook.readStatus = 'Unfinished';
     }
     theLibrary.push(userBook);
-    e.preventDefault();
-    displayBook();
+    if (!(titleInput.value === '') && !(authorInput.value === '') && !(pagesInput.value === '')) {
+        e.preventDefault();
+        document.querySelector('.book-form').style.display = 'none';
+        displayBook();
+    }
 }
 
 newBookButton.addEventListener('click', createBook);
