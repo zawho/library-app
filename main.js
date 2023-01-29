@@ -52,7 +52,7 @@ function displayBook() {
 }
 
 // Add book to library.
-function addBook() {
+function addBook(e) {
     const userBook = new Book();
     document.querySelector('.book-form').style.display = 'none';
     userBook.title = titleInput.value;
@@ -64,6 +64,7 @@ function addBook() {
         userBook.readStatus = 'Unfinished';
     }
     theLibrary.push(userBook);
+    e.preventDefault();
     displayBook();
 }
 
