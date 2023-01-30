@@ -31,7 +31,7 @@ function displayBook() {
     const cardTitle = document.createElement('div');
     const cardAuthor = document.createElement('div');
     const cardPages = document.createElement('div');
-    const cardReadStatus = document.createElement('div');
+    const readStatusButton = document.createElement('button');
     const deleteButton = document.createElement('button');
     deleteButton.innerText = 'Delete';
     bookCard.classList.add('book-card');
@@ -40,19 +40,29 @@ function displayBook() {
             cardTitle.innerText = theLibrary[theLibrary.length - 1].title;
             cardAuthor.innerText = theLibrary[theLibrary.length - 1].author;
             cardPages.innerText = theLibrary[theLibrary.length - 1].pages;
-            cardReadStatus.innerText = theLibrary[theLibrary.length - 1].readStatus;
+            readStatusButton.innerText = theLibrary[theLibrary.length - 1].readStatus;
             userLibrary.appendChild(bookCard);
             bookCard.appendChild(cardTitle);
             bookCard.appendChild(cardAuthor);
             bookCard.appendChild(cardPages);
-            bookCard.appendChild(cardReadStatus);
+            bookCard.appendChild(readStatusButton);
             bookCard.appendChild(deleteButton);
             bookCard.dataset.arrayIndex = i;
     }
+    
+    function changeReadStatus() {
+        if (readStatusButton.innerText === 'Finished') {
+            readStatusButton.innerText = 'Unfinished';
+        } else if (readStatusButton.innerText === 'Unfinished') {
+            readStatusButton.innerText = 'Finished';
+        }
+    }
+
     function deleteBook() {
         theLibrary.splice(bookCard.dataset.arrayIndex, 1);
         userLibrary.removeChild(bookCard);
     }
+    readStatusButton.addEventListener('click', changeReadStatus);
     deleteButton.addEventListener('click', deleteBook);
 }
 
