@@ -47,6 +47,7 @@ function displayBook() {
             bookCard.appendChild(cardPages);
             bookCard.appendChild(cardReadStatus);
             bookCard.appendChild(deleteButton);
+            bookCard.dataset.arrayIndex = i;
     }
 }
 
