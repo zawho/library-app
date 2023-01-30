@@ -32,7 +32,10 @@ function displayBook() {
     const cardAuthor = document.createElement('div');
     const cardPages = document.createElement('div');
     const cardReadStatus = document.createElement('div');
+    const deleteButton = document.createElement('button');
+    deleteButton.innerText = 'Delete';
     bookCard.classList.add('book-card');
+    deleteButton.classList.add('delete-button');
     for (let i = 0; i < theLibrary.length; i++) {
             cardTitle.innerText = theLibrary[theLibrary.length - 1].title;
             cardAuthor.innerText = theLibrary[theLibrary.length - 1].author;
@@ -43,6 +46,7 @@ function displayBook() {
             bookCard.appendChild(cardAuthor);
             bookCard.appendChild(cardPages);
             bookCard.appendChild(cardReadStatus);
+            bookCard.appendChild(deleteButton);
     }
 }
 
