@@ -51,11 +51,12 @@ function displayBook() {
     }
     
     function changeReadStatus() {
-        if (readStatusButton.innerText === 'Finished') {
-            readStatusButton.innerText = 'Unfinished';
-        } else if (readStatusButton.innerText === 'Unfinished') {
-            readStatusButton.innerText = 'Finished';
+        if (theLibrary[bookCard.dataset.arrayIndex].readStatus === 'Finished') {
+            theLibrary[bookCard.dataset.arrayIndex].readStatus = 'Unfinished';
+        } else if (theLibrary[bookCard.dataset.arrayIndex].readStatus === 'Unfinished') {
+            theLibrary[bookCard.dataset.arrayIndex].readStatus = 'Finished';
         }
+        readStatusButton.innerText = theLibrary[bookCard.dataset.arrayIndex].readStatus;
     }
 
     function deleteBook() {
