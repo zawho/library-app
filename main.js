@@ -49,6 +49,11 @@ function displayBook() {
             bookCard.appendChild(deleteButton);
             bookCard.dataset.arrayIndex = i;
     }
+    function deleteBook() {
+        theLibrary.splice(bookCard.dataset.arrayIndex, 1);
+        userLibrary.removeChild(bookCard);
+    }
+    deleteButton.addEventListener('click', deleteBook);
 }
 
 // Add book to library.
