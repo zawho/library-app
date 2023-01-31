@@ -1,4 +1,28 @@
+body {
+    margin: 0px;
+}
+
 .book-card {
     display: inline-flex;
     flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgb(16, 103, 5);
+    border-bottom: 1px solid rgb(16, 103, 5);
+    padding: 50px 0px;
+    margin-top: 20px;
+}
+
+.new-button {
+    color: rgb(16, 103, 5);
+    background-color: white;
+    border-left: none;
+    border-right: none;
+    border-top: 1px solid rgb(16, 103, 5);
+    border-bottom: 1px solid rgb(16, 103, 5);
+    border-radius: 0px;
 }
