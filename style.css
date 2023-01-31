@@ -2,9 +2,20 @@ body {
     margin: 0px;
 }
 
-.book-card {
-    display: inline-flex;
-    flex-direction: column;
+.outer-container {
+ display: grid;
+ grid-template-columns: 1fr 4fr 1fr;
+}
+
+.library-column-1, .library-column-2 {
+    writing-mode: vertical-rl;
+    justify-self: center;
+    align-self: center;
+    white-space: pre;
+}
+
+.library-column-1 {
+    transform: scale(-1);
 }
 
 header {
@@ -25,4 +36,9 @@ header {
     border-top: 1px solid rgb(16, 103, 5);
     border-bottom: 1px solid rgb(16, 103, 5);
     border-radius: 0px;
+}
+
+.book-card {
+    display: inline-flex;
+    flex-direction: column;
 }
