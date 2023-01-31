@@ -30,6 +30,38 @@ header {
     margin-top: 20px;
 }
 
+.book-form {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    font-weight: 100;
+    font-size: 0.8rem;
+}
+
+.title-input, .pages-input {
+    border: none;
+}
+
+.author-input {
+    border-left: none;
+    border-right: none;
+    border-top: 1px solid rgb(16, 103, 5);
+    border-bottom: 1px solid rgb(16, 103, 5); 
+}
+
+.add-book {
+    color: rgb(16, 103, 5);
+    background-color: white;
+    border-left: none;
+    border-right: none;
+    border-top: 1px solid rgb(16, 103, 5);
+    border-bottom: 1px solid rgb(16, 103, 5);
+    border-radius: 0px;
+    width: 80px;
+}
+
 .new-button {
     grid-column: 2 / 3;
     justify-self: center;
