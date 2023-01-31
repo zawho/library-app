@@ -23,16 +23,17 @@ body {
 }
 
 header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     border-top: 1px solid rgb(16, 103, 5);
     border-bottom: 1px solid rgb(16, 103, 5);
-    padding: 50px 0px;
     margin-top: 20px;
 }
 
 .new-button {
+    grid-column: 2 / 3;
+    justify-self: center;
+    align-items: center;
     color: rgb(16, 103, 5);
     background-color: white;
     border-left: none;
@@ -41,6 +42,8 @@ header {
     border-bottom: 1px solid rgb(16, 103, 5);
     border-radius: 0px;
     font-family: 'Arial', sans-serif;
+    margin: 50px 0px;
+    width: 80px;
 }
 
 .book-card {
