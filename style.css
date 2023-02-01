@@ -28,10 +28,13 @@ input, button, label {
 
 header {
     display: grid;
+    justify-items: center;
+    align-items: center;
     grid-template-columns: 1fr 1fr 1fr;
     border-top: 1px solid rgb(16, 103, 5);
     border-bottom: 1px solid rgb(16, 103, 5);
     margin-top: 20px;
+    padding: 10px 0px;
 }
 
 .book-form {
@@ -40,6 +43,9 @@ header {
     justify-content: center;
     align-items: center;
     font-family: 'Arial', sans-serif;
+    border: 1px solid rgb(16, 103, 5);
+    padding: 5px;
+    width: 150px;
 }
 
 .title-input, .pages-input {
