@@ -21,7 +21,7 @@ function Book() {
 // New book button displays form.
 function createBook() {
     document.querySelector('.book-form').reset();
-    document.querySelector('.book-form').style.display = 'inline-flex';
+    document.querySelector('.book-form').style.display = 'flex';
     document.querySelector('.book-form').style.flexDirection = 'column';
 }
 
