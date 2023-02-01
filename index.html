@@ -21,8 +21,10 @@
                     <input type="text" placeholder="Author" class="author-input" required>
                     <input type="text" placeholder="Pages" class="pages-input" required>
                     <div class="read-check">
-                        Finished<input type="radio" class="yes-read" name="read-or-not">
-                        Unfinished<input type="radio" class="not-read" name="read-or-not">
+                        <label class="finished-label">
+                            <input type="radio" class="yes-read" name="read-or-not">Finished</label>
+                        <label class="unfinished-label" for=>
+                            <input type="radio" class="not-read" name="read-or-not">Unfinished</label>
                     </div>
                     <button type="submit" class="add-book">Add Book</button>
                 </form>
