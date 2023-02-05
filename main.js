@@ -92,7 +92,7 @@ function addBook(e) {
         document.querySelector('.book-form').style.display = 'none';
         displayBook();
     }
-    if (newBookButton.style.display === 'none') {
+    if (!(titleInput.value === '') && !(authorInput.value === '') && !(pagesInput.value === '') && newBookButton.style.display === 'none') {
         newBookButton.style.display = 'block';
     }
 }
