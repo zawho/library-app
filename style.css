@@ -115,12 +115,13 @@ header {
 .book-card {
     display: inline-flex;
     flex-direction: column;
+    align-items: center;
     border: 1px solid rgb(16, 103, 5);
     padding: 5px;
 }
 
-.book-card > div, button {
-    color: rgba(0, 0, 0, 0.7);
+.book-card > div {
+    margin-bottom: 2px;
 }
 
 .book-card > button {
@@ -131,11 +132,13 @@ header {
     border-top: 1px solid rgb(16, 103, 5);
     border-radius: 0px;
     font-family: 'Arial', sans-serif;
-    width: 80px;
+    width: 150px;
+    color: rgb(16, 103, 5);
 }
 
 .read-status {
     border-bottom: none;
+    margin-top: 8px;
 }
 
 .delete-button {
