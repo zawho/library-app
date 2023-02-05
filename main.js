@@ -1,11 +1,12 @@
 const newBookButton = document.querySelector('.new-button');
-// document.querySelector('.book-form').style.display = 'none';
 const titleInput = document.querySelector('.title-input');
 const authorInput = document.querySelector('.author-input');
 const pagesInput = document.querySelector('.pages-input');
 const yesRead = document.querySelector('.yes-read');
 const addBookButton = document.querySelector('.add-book');
 const userLibrary = document.querySelector('.user-library');
+
+document.querySelector('.book-form').style.display = 'none';
 
 // Main book storage array.
 const theLibrary = [];
