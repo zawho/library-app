@@ -8,8 +8,6 @@ const userLibrary = document.querySelector('.user-library');
 
 document.querySelector('.book-form').style.display = 'none';
 
-const pageWidthQuery = window.matchMedia('(max-width: 600px)');
-
 // Main book storage array.
 const theLibrary = [];
 
@@ -26,7 +24,7 @@ function createBook() {
     document.querySelector('.book-form').reset();
     document.querySelector('.book-form').style.display = 'flex';
     document.querySelector('.book-form').style.flexDirection = 'column';
-    if (pageWidthQuery.matches) {
+    if (window.matchMedia('(max-width: 725px)').matches) {
         newBookButton.style.display = 'none';
     }
 }
