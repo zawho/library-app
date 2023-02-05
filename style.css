@@ -171,7 +171,15 @@ header {
         grid-column: 1 / 1;
     }
 
+    .book-form > input {
+        height: 12px;
+    }
+
     .read-check > label {
+        font-size: 0.7rem;
+
+    }
+    .add-book {
         font-size: 0.6rem;
     }
 }
