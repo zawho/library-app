@@ -1,5 +1,5 @@
 const newBookButton = document.querySelector('.new-button');
-// document.querySelector('.book-form').style.display = 'none';
+document.querySelector('.book-form').style.display = 'none';
 const titleInput = document.querySelector('.title-input');
 const authorInput = document.querySelector('.author-input');
 const pagesInput = document.querySelector('.pages-input');

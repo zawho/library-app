@@ -6,6 +6,11 @@ input, button, label {
     font-size: 0.8rem;
 }
 
+input:focus {
+    outline: none;
+    background-color: rgba(16, 103, 5, 0.080);
+}
+
 .outer-container {
  display: grid;
  grid-template-columns: 1fr 4fr 1fr;
