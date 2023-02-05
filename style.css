@@ -2,7 +2,7 @@ body {
     margin: 0px;
 }
 
-input, button, label {
+input, button, label, .book-card {
     font-size: 0.8rem;
 }
 
@@ -38,7 +38,7 @@ header {
     grid-template-columns: 1fr 1fr 1fr;
     border-top: 1px solid rgb(16, 103, 5);
     border-bottom: 1px solid rgb(16, 103, 5);
-    margin-top: 20px;
+    margin: 20px 0px;
     padding: 10px 0px;
     height: 131px;
 }
@@ -109,9 +109,35 @@ header {
 .user-library{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
 }
 
 .book-card {
     display: inline-flex;
     flex-direction: column;
+    border: 1px solid rgb(16, 103, 5);
+    padding: 5px;
+}
+
+.book-card > div, button {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.book-card > button {
+    color: rgb(16, 103, 5);
+    background-color: white;
+    border-left: none;
+    border-right: none;
+    border-top: 1px solid rgb(16, 103, 5);
+    border-radius: 0px;
+    font-family: 'Arial', sans-serif;
+    width: 80px;
+}
+
+.read-status {
+    border-bottom: none;
+}
+
+.delete-button {
+    border-bottom: 1px solid rgb(16, 103, 5);
 }

@@ -40,7 +40,7 @@ function displayBook() {
     for (let i = 0; i < theLibrary.length; i++) {
             cardTitle.innerText = theLibrary[theLibrary.length - 1].title;
             cardAuthor.innerText = theLibrary[theLibrary.length - 1].author;
-            cardPages.innerText = theLibrary[theLibrary.length - 1].pages;
+            cardPages.innerText = `${theLibrary[theLibrary.length - 1].pages} pages`;
             readStatusButton.innerText = theLibrary[theLibrary.length - 1].readStatus;
             userLibrary.appendChild(bookCard);
             bookCard.appendChild(cardTitle);
