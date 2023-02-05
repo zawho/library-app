@@ -8,6 +8,8 @@ const userLibrary = document.querySelector('.user-library');
 
 document.querySelector('.book-form').style.display = 'none';
 
+const pageWidthQuery = window.matchMedia('(max-width: 600px)');
+
 // Main book storage array.
 const theLibrary = [];
 
@@ -24,6 +26,9 @@ function createBook() {
     document.querySelector('.book-form').reset();
     document.querySelector('.book-form').style.display = 'flex';
     document.querySelector('.book-form').style.flexDirection = 'column';
+    if (pageWidthQuery.matches) {
+        newBookButton.style.display = 'none';
+    }
 }
 
 // Loop through array and display books.
@@ -88,6 +93,9 @@ function addBook(e) {
         e.preventDefault();
         document.querySelector('.book-form').style.display = 'none';
         displayBook();
+    }
+    if (newBookButton.style.display === 'none') {
+        newBookButton.style.display = 'block';
     }
 }
 
