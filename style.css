@@ -54,6 +54,10 @@ header {
     width: 149px;
 }
 
+.book-form > input {
+    width: 139px;
+}
+
 .title-input, .pages-input {
     border: none;
 }
