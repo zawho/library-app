@@ -88,6 +88,8 @@ header {
 .yes-read, .not-read {
     accent-color: rgb(16, 103, 5);
     height: 0.5rem;
+    margin: 0px 10px 0px 0px;
+    padding: 0px;
 }
 
 .add-book {
