@@ -1,5 +1,5 @@
 const newBookButton = document.querySelector('.new-button');
-document.querySelector('.book-form').style.display = 'none';
+// document.querySelector('.book-form').style.display = 'none';
 const titleInput = document.querySelector('.title-input');
 const authorInput = document.querySelector('.author-input');
 const pagesInput = document.querySelector('.pages-input');
@@ -35,6 +35,7 @@ function displayBook() {
     const deleteButton = document.createElement('button');
     deleteButton.innerText = 'Delete';
     bookCard.classList.add('book-card');
+    readStatusButton.classList.add('read-status');
     deleteButton.classList.add('delete-button');
     for (let i = 0; i < theLibrary.length; i++) {
             cardTitle.innerText = theLibrary[theLibrary.length - 1].title;
