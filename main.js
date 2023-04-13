@@ -11,12 +11,14 @@ document.querySelector('.book-form').style.display = 'none';
 // Main book storage array.
 const theLibrary = [];
 
-// Book constructor.
-function Book() {
-    this.title = '';
-    this.author = '';
-    this.pages = '';
-    this.readStatus = '';
+// Book class.
+class Book {
+    constructor() {
+        this.title = '';
+        this.author = '';
+        this.pages = '';
+        this.readStatus = '';
+    }
 }
 
 // New book button displays form.
