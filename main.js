@@ -1,12 +1,30 @@
 const newBookButton = document.querySelector('.new-button');
+const bookForm = document.querySelector('.book-form');
 const titleInput = document.querySelector('.title-input');
 const authorInput = document.querySelector('.author-input');
 const pagesInput = document.querySelector('.pages-input');
+const errorMsg = document.querySelector('.error-msg');
 const yesRead = document.querySelector('.yes-read');
 const addBookButton = document.querySelector('.add-book');
 const userLibrary = document.querySelector('.user-library');
 
 document.querySelector('.book-form').style.display = 'none';
+
+// Form validation.
+function checkTitle() {
+    if (titleInput.validity.valueMissing) {
+        errorMsg.innerText = 'Please enter a title.';
+    }
+}
+
+function validateForm(e) {
+    if (!titleInput.validity.valid) {
+        checkTitle();
+        e.preventDefault();
+    }
+}
+
+bookForm.addEventListener('submit', validateForm);
 
 // Main book storage array.
 const theLibrary = [];

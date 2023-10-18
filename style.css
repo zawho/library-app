@@ -2,7 +2,7 @@ body {
     margin: 0px;
 }
 
-input, button, label, .book-card {
+input, button, label, .book-card, .error-msg {
     font-size: 0.8rem;
 }
 
@@ -73,6 +73,10 @@ header {
 
 .pages-input {
     border-bottom: 1px solid rgb(16, 103, 5);
+}
+
+.error-msg {
+    margin-top: 5px;
 }
 
 .read-check {

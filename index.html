@@ -17,9 +17,10 @@
         <div class="inner-container">
             <header>
                 <form class="book-form" novalidate>
-                    <input type="text" placeholder="Title" class="title-input">
+                    <input type="text" placeholder="Title" class="title-input" required>
                     <input type="text" placeholder="Author" class="author-input">
                     <input type="text" placeholder="Pages" class="pages-input">
+                    <div class="error-msg"></div>
                     <div class="read-check">
                         <label class="finished-label">
                             <input type="radio" class="yes-read" name="read-or-not">Finished</label>
