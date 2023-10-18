@@ -24,6 +24,9 @@ function Book() {
 // New book button displays form.
 function createBook() {
     document.querySelector('.book-form').reset();
+    if (!(errorMsg.innerText === '')) {
+        errorMsg.innerText = '';
+    }
     document.querySelector('.book-form').style.display = 'flex';
     document.querySelector('.book-form').style.flexDirection = 'column';
     if (window.matchMedia('(max-width: 725px)').matches) {
