@@ -10,22 +10,6 @@ const userLibrary = document.querySelector('.user-library');
 
 document.querySelector('.book-form').style.display = 'none';
 
-// Form validation.
-function checkTitle() {
-    if (titleInput.validity.valueMissing) {
-        errorMsg.innerText = 'Please enter a title.';
-    }
-}
-
-function validateForm(e) {
-    if (!titleInput.validity.valid) {
-        checkTitle();
-        e.preventDefault();
-    }
-}
-
-bookForm.addEventListener('submit', validateForm);
-
 // Main book storage array.
 const theLibrary = [];
 
@@ -115,5 +99,20 @@ function addBook(e) {
     }
 }
 
+// Form validation.
+function validateForm(e) {
+    if (!titleInput.validity.valid) {
+        errorMsg.innerText = 'Enter a title.';
+        e.preventDefault();
+    } else if (!authorInput.validity.valid) {
+        errorMsg.innerText = 'Enter an author.';
+        e.preventDefault();
+    } else if (!pagesInput.validity.valid) {
+        errorMsg.innerText = 'Enter the number of pages.';
+        e.preventDefault();
+    }
+}
+
+bookForm.addEventListener('submit', validateForm);
 newBookButton.addEventListener('click', createBook);
 addBookButton.addEventListener('click', addBook);
